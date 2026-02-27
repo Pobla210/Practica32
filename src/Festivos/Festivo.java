@@ -27,7 +27,7 @@ public class Festivo {
 
     public String toString(){
         DateTimeFormatter patron = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-        return fechaFestivo.format(patron)+" "+descripcion;
+        return fechaFestivo.format(patron)+" "+descripcion;-
     }
 
 }

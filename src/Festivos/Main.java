@@ -101,7 +101,7 @@ public class Main {
                     }
                     break;
                 case 5:
-                    System.out.println("Saliendo...");
+                    System.out.println("Saliendo....");
                     break;
             }
 
