@@ -2,6 +2,8 @@ package Festivos;
 
 import java.time.DateTimeException;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.Scanner;
 
 public class Main {
@@ -95,7 +97,17 @@ public class Main {
                     break;
 
                 case 4:
-                    System.out.println("Lista de los festivos: ");
+                    System.out.println("Lista de los festivos ordenados por fecha: ");
+
+                    // Ordenar lista por fecha
+                    Collections.sort(listaFestivos, new Comparator<Festivo>() {
+                        @Override
+                        public int compare(Festivo f1, Festivo f2) {
+                            return f1.fechaFestivo.compareTo(f2.fechaFestivo);
+                        }
+                    });
+
+                    // Imprimir
                     for (Festivo diasfestivo : listaFestivos){
                         System.out.println(diasfestivo);
                     }
